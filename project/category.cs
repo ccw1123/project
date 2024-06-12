@@ -18,6 +18,11 @@ namespace project
             InitializeComponent();
         }
 
+        public frmCategory(String s)
+        {
+            InitializeComponent();
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

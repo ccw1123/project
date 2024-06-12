@@ -68,7 +68,7 @@ namespace project
                 {
                     // Restock the selected item
                     int quantity = Convert.ToInt32(DataGridView.Rows[e.RowIndex].Cells["Quantity"].Value);
-                    DataGridView.Rows[e.RowIndex].Cells["Quantity"].Value = quantity + 1;
+                    DataGridView.Rows[e.RowIndex].Cells["Quantity"].Value = quantity + 1000;
                 }
             }
         }

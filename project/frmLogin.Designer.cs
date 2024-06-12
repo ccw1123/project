@@ -1,4 +1,4 @@
-﻿namespace project
+﻿namespace sysytem
 {
     partial class frmLogin
     {
@@ -38,7 +38,7 @@
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSign = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,11 +125,12 @@
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Location = new System.Drawing.Point(182, 261);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '\0';
+            this.txtPass.PasswordChar = '●';
             this.txtPass.PlaceholderText = "Password";
             this.txtPass.SelectedText = "";
             this.txtPass.Size = new System.Drawing.Size(366, 40);
             this.txtPass.TabIndex = 17;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnSign
             // 
@@ -156,33 +157,30 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Forgot password?";
             // 
-            // guna2ComboBox1
+            // btnCombo
             // 
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 17;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Dealer",
-            "Staff",
-            "Manager"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(300, 140);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox1.TabIndex = 20;
+            this.btnCombo.AutoRoundedCorners = true;
+            this.btnCombo.BackColor = System.Drawing.Color.Transparent;
+            this.btnCombo.BorderRadius = 17;
+            this.btnCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.btnCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.btnCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnCombo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.btnCombo.ItemHeight = 30;
+            this.btnCombo.Location = new System.Drawing.Point(300, 140);
+            this.btnCombo.Name = "btnCombo";
+            this.btnCombo.Size = new System.Drawing.Size(140, 36);
+            this.btnCombo.TabIndex = 20;
+            this.btnCombo.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 436);
-            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.btnCombo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSign);
             this.Controls.Add(this.txtPass);
@@ -211,7 +209,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPass;
         private Guna.UI2.WinForms.Guna2Button btnSign;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox btnCombo;
     }
 }
 
